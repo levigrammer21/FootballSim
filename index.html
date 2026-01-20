@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HBFL</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>HBFL</h1>
+    <div id="userBox"></div>
+  </header>
+
+  <main>
+    <section class="card" id="authCard">
+      <h2>Login</h2>
+      <p class="muted">Email magic link (free + easy). Check your email after submitting.</p>
+      <input id="email" placeholder="you@email.com" autocomplete="email" />
+      <button id="btnMagic">Send magic link</button>
+      <div id="authMsg" class="muted"></div>
+    </section>
+
+    <section class="card hidden" id="appCard">
+      <h2>League</h2>
+
+      <div class="row">
+        <button id="btnCreateLeague">Create HBFL League (random 8 teams)</button>
+        <button id="btnRefresh">Refresh</button>
+      </div>
+
+      <div id="leagueArea" class="stack"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
